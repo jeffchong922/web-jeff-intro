@@ -1,15 +1,27 @@
+import Terminal from "./components/Terminal";
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-32 px-16 bg-white dark:bg-black">
-        <div className="text-6xl mb-8">🚧</div>
-        <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 mb-4">
-          正在施工中
-        </h1>
-        <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          敬请期待...
-        </p>
-      </main>
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-950 px-4 py-12">
+      {/* ASCII Art 标题 */}
+      <pre className="text-green-500/80 text-xs sm:text-sm font-mono mb-8 select-none leading-tight text-center">
+{`
+            ██╗ ███████╗ ███████╗ ███████╗
+            ██║ ██╔════╝ ██╔════╝ ██╔════╝
+          ██║ █████╗   █████╗   █████╗
+     ██   ██║ ██╔══╝   ██╔══╝   ██╔══╝
+  ╚█████╔╝ ██████╗  ██║      ██║
+   ╚════╝  ╚═════╝  ╚═╝      ╚═╝
+`}
+      </pre>
+
+      {/* 终端主体 */}
+      <Terminal />
+
+      {/* 底部信息 */}
+      <p className="mt-8 text-zinc-600 text-xs font-mono">
+        Built with Next.js 16 · Tailwind CSS v4
+      </p>
     </div>
   );
 }
